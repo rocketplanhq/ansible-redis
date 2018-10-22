@@ -1,0 +1,10 @@
+- name: 'install'
+  apt:
+    name: 'redis-server{% if redis_version %}={{ redis_version }}{% endif %}'
+
+- name: 'configure'
+  template:
+    src: 'templates/redis/{{ redis_conf }}'
+    dest: '/etc/redis/redis.conf'
+  when: 'redis_conf|default("") != ""'
+  notify: 'redis: restart'

@@ -1,0 +1,20 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: Rocketplan
+  description: "Pure Redis role"
+  company: "Rocketplan, LLC"
+  license: "MIT"
+
+  platforms:
+    - name: Debian
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - web
+    - redis
